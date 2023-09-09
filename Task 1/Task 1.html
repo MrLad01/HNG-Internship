@@ -25,14 +25,14 @@
         <div data-testid="currentDayOfTheWeek"
         class="field"
         >
-            <label for="day of the week">Current Day of the Week:</label>
-            <h3></h3>
+            <label for="dayoftheweek">Current Day of the Week:</label>
+            <h3 id="dayoftheweek"></h3>
         </div>
         <div data-testid="currentUTCTime"
         class="field"
         >
-            <label for="current UTC time">Current UTC Time:</label>
-            <h3></h3>
+            <label for="currentUTCtime">Current UTC Time:</label>
+            <h3 id="currentUTCtime"></h3>
         </div>
         <div data-testid="myTrack"
         class="field"
@@ -44,8 +44,36 @@
         class="field"
         >
             <label for="github URL">GitHub URL:</label>
-            <a href="http://" target="_blank" rel="noopener noreferrer"></a>
+            <a href="https://github.com/MrLad01/HNG-Internship" target="_blank" rel="noopener noreferrer"> Repository Here</a>
         </div>
     </div>
 </body>
+
+<script>
+    function currentTime() {
+        var daysOfTheWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+        var date = new Date();
+        var day = date.getDay();
+        var hours = date.getUTCHours();
+        var minutes = date.getUTCMinutes();
+        var seconds = date.getUTCSeconds();
+
+        var ap = " ";
+        if(hours < 12){
+            ap = "AM"
+        } else { 
+            ap = "PM";
+            hours = hours - 12;
+        }
+
+        var time = hours + ":" + minutes + ":" + seconds + " " + ap;
+
+        document.getElementById("currentUTCtime").innerHTML = time;
+        document.getElementById("dayoftheweek").innerHTML = daysOfTheWeek[day];
+    }
+
+    setInterval(currentTime, 1000);
+
+
+</script>
 </html>
