@@ -22,7 +22,7 @@ function currentTime() {
     var milliseconds = (hours * 3600 + minutes * 60 + seconds) * 1000;
 
 
-    document.getElementById("currentUTCtime").innerHTML = milliseconds;
+    document.getElementById("currentUTCtime").innerHTML = milliseconds + "milliseconds";
     document.getElementById("dayoftheweek").innerHTML = daysOfTheWeek[day];
 }
 
