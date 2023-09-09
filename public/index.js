@@ -5,19 +5,20 @@ function currentTime() {
     var hours = date.getUTCHours();
     var minutes = date.getUTCMinutes();
     var seconds = date.getUTCSeconds();
-    var paddedSeconds = String(seconds).padStart(2, "0");
-    var paddedMinutes = String(minutes).padStart(2, "0");
+    // var paddedSeconds = String(seconds).padStart(2, "0");
+    // var paddedMinutes = String(minutes).padStart(2, "0");
     
-    var ap = " ";
-    if(hours < 12){
-        ap = "AM"
-    } else { 
-        ap = "PM";
-        hours = hours - 12;
-        var paddedHours = String(hours).padStart(2, "0");
-    }
+    // var ap = " ";
+    // if(hours < 12){
+    //     ap = "AM"
+    // } else { 
+    //     ap = "PM";
+    //     hours = hours - 12;
+    //     var paddedHours = String(hours).padStart(2, "0");
+    // }
 
-    var time = paddedHours + ":" + paddedMinutes + ":" + paddedSeconds + " " + ap;
+    // var time = paddedHours + ":" + paddedMinutes + ":" + paddedSeconds + " " + ap;
+
 
     document.getElementById("currentUTCtime").innerHTML = time;
     document.getElementById("dayoftheweek").innerHTML = daysOfTheWeek[day];
