@@ -17,7 +17,7 @@ function currentTime() {
         hours = hours - 12;
     }
 
-    var time = paddedHours + ":" + paddedMinutesinutes + ":" + paddedSeconds + " " + ap;
+    var time = paddedHours + ":" + paddedMinutes + ":" + paddedSeconds + " " + ap;
 
     document.getElementById("currentUTCtime").innerHTML = time;
     document.getElementById("dayoftheweek").innerHTML = daysOfTheWeek[day];
