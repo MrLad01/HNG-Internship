@@ -57,6 +57,7 @@
         var hours = date.getUTCHours();
         var minutes = date.getUTCMinutes();
         var seconds = date.getUTCSeconds();
+        var paddedSeconds = String(seconds).padStart(2, "0");
 
         var ap = " ";
         if(hours < 12){
@@ -66,7 +67,7 @@
             hours = hours - 12;
         }
 
-        var time = hours + ":" + minutes + ":" + seconds + " " + ap;
+        var time = hours + ":" + minutes + ":" + paddedSeconds + " " + ap;
 
         document.getElementById("currentUTCtime").innerHTML = time;
         document.getElementById("dayoftheweek").innerHTML = daysOfTheWeek[day];
