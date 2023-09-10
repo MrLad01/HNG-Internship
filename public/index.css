@@ -36,10 +36,16 @@ body{
 .field a{
     text-decoration: none;
     color: black;
+    font-weight: 500;
 }
 .field a:hover{
     color: blue;
     text-decoration: underline;
+    font-weight: 500;
+}
+
+.field p{
+    font-weight: 500;
 }
 
 .name{
