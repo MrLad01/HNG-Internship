@@ -7,25 +7,13 @@ function currentTime() {
     var hours = date.getUTCHours();
     var minutes = date.getUTCMinutes();
     var seconds = date.getUTCSeconds();
-    // var paddedSeconds = String(seconds).padStart(2, "0");
-    // var paddedMinutes = String(minutes).padStart(2, "0");
-    
-    // var ap = " ";
-    // if(hours < 12){
-    //     ap = "AM"
-    // } else { 
-    //     ap = "PM";
-    //     hours = hours - 12;
-    //     var paddedHours = String(hours).padStart(2, "0");
-    // }
+    var offset = date.getTimezoneOffset() * 60 * 1000;
 
-    // var time = paddedHours + ":" + paddedMinutes + ":" + paddedSeconds + " " + ap;
-
-    // var milliseconds = (year *  + month * 1036800 + day* 86400 + hours * 3600 + minutes * 60 + seconds) * 1000;
     var milliseconds = date.getTime();
+    var time = milliseconds + offset;
 
 
-    document.getElementById("currentUTCtime").innerHTML = milliseconds + " " +"milliseconds";
+    document.getElementById("currentUTCtime").innerHTML = time + " " +"milliseconds";
     document.getElementById("dayoftheweek").innerHTML = daysOfTheWeek[day];
 }
 
