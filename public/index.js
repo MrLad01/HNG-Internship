@@ -29,4 +29,4 @@ function currentTime() {
     document.getElementById("dayoftheweek").innerHTML = daysOfTheWeek[day];
 }
 
-setInterval(currentTime, 1);
+setInterval(currentTime, 1000);
