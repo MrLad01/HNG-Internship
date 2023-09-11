@@ -1,6 +1,8 @@
 function currentTime() {
     var daysOfTheWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
     var date = new Date();
+    var year = date.getUTCFullYear();
+    var month = date.getMonth();
     var day = date.getDay();
     var hours = date.getUTCHours();
     var minutes = date.getUTCMinutes();
@@ -19,11 +21,12 @@ function currentTime() {
 
     // var time = paddedHours + ":" + paddedMinutes + ":" + paddedSeconds + " " + ap;
 
-    var milliseconds = (hours * 3600 + minutes * 60 + seconds) * 1000;
+    // var milliseconds = (year *  + month * 1036800 + day* 86400 + hours * 3600 + minutes * 60 + seconds) * 1000;
+    var milliseconds = date.getTime();
 
 
     document.getElementById("currentUTCtime").innerHTML = milliseconds + " " +"milliseconds";
     document.getElementById("dayoftheweek").innerHTML = daysOfTheWeek[day];
 }
 
-setInterval(currentTime, 1000);
+setInterval(currentTime, 1);
